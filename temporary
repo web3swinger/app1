@@ -1,0 +1,783 @@
+setScreen("Intro-Thing");
+console.log("Hi!");
+console.log("Please dont change the code or remix this project");
+//Please...dont change this projects code or remix it. Pls...? 😢😢😢😢😢
+var Welcome = prompt("Hi and welcome to the sequel of Image Guesser, Chapter -2 of universe travels. This game was made in 2023. Hope you enjoy!");
+var Welcome2 = prompt("Play on PC or laptop");
+
+//Cheat Code
+onEvent("button96", "click", function( ) {
+  var Cheat = prompt("Ah, cheat code! Enter the cheat code to get some stuff (capitals matter)");
+  if (Cheat == "BASIC1") {
+    var x = prompt("Gotcha, here are ALL THE BASIC ACHIEVMENTS unlocked!");
+    HowToPlay = HowToPlay + 1;
+    HowToPlay2 = HowToPlay2 + 1;
+    WhatsNew = WhatsNew + 1;
+    NoChanging = NoChanging + 1;
+    StoryTime = StoryTime + 1;
+    HereYourCredits = HereYourCredits + 1;
+    Reviewed = Reviewed + 1;
+    Unlock = Unlock + 1;
+    MusicTruth = MusicTruth + 1;
+    SlimePlane = SlimePlane + 1;
+    JustAsk = JustAsk + 1;
+    Meow = Meow + 1;
+    Blossom = Blossom + 1;
+    showElement("button8");
+    showElement("button69");
+    showElement("button9");
+    showElement("button18");
+    showElement("button35");
+    showElement("button61");
+    showElement("button75");
+    showElement("button77");
+    showElement("button79");
+    showElement("button51");
+    showElement("button10");
+    showElement("button71");
+    showElement("button74");
+  } else if ((Cheat == "adventure1")) {
+    var x = prompt("Ok, all Adventure achievments for you");
+    Adventure = Adventure + 1;
+    Adventure2 = Adventure2 + 1;
+    showElement("button26");
+    showElement("button27");
+    showElement("button28");
+    showElement("button29");
+    showElement("button82");
+    showElement("button81");
+    showElement("button86");
+    showElement("button88");
+  } else if ((Cheat == "TV")) {
+    var x = prompt("Actually confused here but ok...");
+    PictureTV = PictureTV + 1;
+    TerribleCartoon = TerribleCartoon + 1;
+    TwoThousandOneNews = TwoThousandOneNews + 1;
+    WARNING = WARNING + 1;
+    showElement("button46");
+    showElement("button47");
+    showElement("button48");
+    showElement("button45");
+  }
+});
+//Review
+onEvent("button67", "click", function( ) {
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  var x = prompt("This will take some time...");
+  createRecord("Player Reviews", {Name:getText("ReviewUsername"), Review:(getText("ReviewAnswer"))}, function(record) {
+    var x = prompt("Review submitted!");
+    if (Reviewed == 0) {
+      var x = prompt("Reviewed! unlocked! Check the achievment section");
+      Reviewed = Reviewed + 1;
+      showElement("button75");
+      playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+    }
+  });
+  createRecord("Player Stars", {Name:getText("ReviewUsername"), Stars:getNumber("text_area16")}, function(record) {
+    var x = prompt("1-10 rating scale info submitted!");
+  });
+});
+//Achievments
+var HowToPlay = 0;
+var HowToPlay2 = 0;
+var WhatsNew = 0;
+var NoChanging = 0;
+var JustAsk = 0;
+var MusicTruth = 0;
+var SlimePlane = 0;
+var Meow = 0;
+var Blossom = 0;
+var Reviewed = 0;
+var StoryTime = 0;
+var HereYourCredits = 0;
+var TerribleCartoon = 0;
+var Adventure = 0;
+var PictureTV = 0;
+var TwoThousandOneNews = 0;
+var WARNING = 0;
+var Unlock = 0;
+var Adventure2 = 0;
+//-Descriptions
+//--Locked
+onEvent("button12", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button80", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button73", "click", function( ) {
+  setText("text_area4", "Cute cat");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button62", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button73", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button76", "click", function( ) {
+  setText("text_area4", "Review the game to get this achievment");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button70", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button3", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button4", "click", function( ) {
+  if (JustAsk == 0) {
+    var x = prompt("Just ask? unlocked! And your already in the achievment section so...check the achievment section");
+    JustAsk = JustAsk + 1;
+    showElement("button10");
+  }
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  setText("text_area4", "Just ask! Really, just ask and I'll tell you mate!");
+});
+onEvent("button19", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button22", "click", function( ) {
+  setText("text_area2", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button24", "click", function( ) {
+  setText("text_area2", "Moo cow");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button25", "click", function( ) {
+  setText("text_area2", "It's...big");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button21", "click", function( ) {
+  setText("text_area2", "WE GOT IT BOYS");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button34", "click", function( ) {
+  setText("text_area4", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button83", "click", function( ) {
+  setText("text_area2", "Let's go on the second adventure!");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button84", "click", function( ) {
+  setText("text_area2", "The memories...");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button85", "click", function( ) {
+  setText("text_area2", "Gotcha mate, gotcha!");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button87", "click", function( ) {
+  setText("text_area2", "???");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+//--Unlocked
+onEvent("button69", "click", function( ) {
+  setText("text_area4", "As if the regular one weren't enough. Code HfdaAD221");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button8", "click", function( ) {
+  setText("text_area4", "How to play? Unlocked when tutorial is seen. Code: HfdaAD");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button9", "click", function( ) {
+  setText("text_area4", "What's new? Unlocked when changelog is seen. Code: CHNGLL");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button10", "click", function( ) {
+  setText("text_area4", "Just ask! Really, just ask and I'll tell you mate! Code: 65");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button71", "click", function( ) {
+  setText("text_area4", "What's a cat doing in the credits section? Code: LKAbsa");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button81", "click", function( ) {
+  setText("text_area2", "Image Guesser!! My man!! Code: EaGota");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button86", "click", function( ) {
+  setText("text_area2", "Gotcha, gotcha. No denying it. Code: IASj");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button88", "click", function( ) {
+  setText("text_area2", "Mahalo i ka mea hoʻohana ʻole i ka unuhi google. Code: ItaJeTT");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button18", "click", function( ) {
+  setText("text_area4", "No changing it mate, no changing it. Code: UysanbaA");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button18", "click", function( ) {
+  setText("text_area2", "Time for an adventure! Code: Utasg");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button82", "click", function( ) {
+  setText("text_area2", "Time for the second adventure! Code: BeasAd");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button74", "click", function( ) {
+  setText("text_area4", "Blossom, pink flower, blossom!!! Code: MASDhusa43");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button27", "click", function( ) {
+  setText("text_area4", "Cow, down next, a spider, Code: YYfdaj");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button28", "click", function( ) {
+  setText("text_area4", "That was more tricky. Code: LKAuhigA");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button18", "click", function( ) {
+  setText("text_area4", "Oh, so your saying I CAN'T CHANGE THE CHANGELOG!?!?!?? Code: HHHyfsa");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button26", "click", function( ) {
+  setText("text_area2", "Let's go on an adventure! Code: Utasg");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button79", "click", function( ) {
+  setText("text_area4", "Music, truth, the same thing. Code: Musayta");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button35", "click", function( ) {
+  setText("text_area4", "Grandma, tell me a story! Code: BaQQg");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button75", "click", function( ) {
+  setText("text_area4", "You reviewed the game! Great! Code: RevieAAg");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button61", "click", function( ) {
+  setText("text_area4", "And there are the credits! Code: CAFGA");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button77", "click", function( ) {
+  setText("text_area4", "Unlocked, unlocked, yea, yea, yea... Code: ImageJdsa");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+//Screens
+onEvent("button1", "click", function( ) {
+  setScreen("AgeAppropriateChecking");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("checkbox1", "click", function( ) {
+  showElement("button68");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button68", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button65", "click", function( ) {
+  setScreen("Review");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button50", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button5", "click", function( ) {
+  setScreen("Credits");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  if (HereYourCredits == 0) {
+    var x = prompt("Here's Your Credits unlocked! Check the achievment section");
+    HereYourCredits = HereYourCredits + 1;
+    showElement("button61");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("button63", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button98", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button97", "click", function( ) {
+  setScreen("GameCelebrations");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button59", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button60", "click", function( ) {
+  setScreen("Characters");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button6", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button2", "click", function( ) {
+  setScreen("Achievments");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button13", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button14", "click", function( ) {
+  setScreen("Changelog");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button510", "click", function( ) {
+  setScreen("Settings");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button15", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button11", "click", function( ) {
+  setScreen("UnlockStation");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  if (Unlock == 0) {
+    var x = prompt("Unlocking Stuff unlocked!Check the achievment section");
+    Unlock = Unlock + 1;
+    showElement("button77");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("button17", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button55", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button37", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button23", "click", function( ) {
+  setScreen("Achievments");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button56", "click", function( ) {
+  open("https://studio.code.org/projects/applab/bOxZuZu-3SMz01acCeQArD8KdPcSglQdS7NRVzjItjw");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button57", "click", function( ) {
+  open("https://studio.code.org/projects/applab/5iWf47UW0ShXi6CfYSj1XhOjalexkAeNXYGGAH31UKM");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button20", "click", function( ) {
+  setScreen("AchievmentsAdventure");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("image2", "click", function( ) {
+  setScreen("TVScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button31", "click", function( ) {
+  setScreen("Adventure");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button32", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button66", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button49", "click", function( ) {
+  setScreen("AchievmentTv");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button42", "click", function( ) {
+  setScreen("AchievmentsAdventure");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button58", "click", function( ) {
+  setScreen("Chapters");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button36", "click", function( ) {
+  setScreen("Chapters");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button36", "click", function( ) {
+  setScreen("MainScreen");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+//TV
+onEvent("button39", "click", function( ) {
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  hideElement("TvAd");
+  hideElement("TvAdText");
+  hideElement("TvNews");
+  hideElement("TvNewsText");
+  showElement("TvCartoon");
+});
+onEvent("button38", "click", function( ) {
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  hideElement("TvCartoon");
+  hideElement("TvAd");
+  hideElement("TvAdText");
+  showElement("TvNews");
+  showElement("TvNewsText");
+  setTimeout(function() {
+    hideElement("TvNews");
+    hideElement("TvNewsText");
+    hideElement("TvAd");
+    hideElement("TvAdText");
+    showElement("TvWARNING");
+    showElement("text_area3");
+  }, 4000);
+});
+onEvent("image2", "click", function( ) {
+  if (PictureTV == 0) {
+    PictureTV = PictureTV + 1;
+    var x = prompt("Picture TV? unlocked! Check the achievment section");
+    showElement("button45");
+  }
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button39", "click", function( ) {
+  if (TerribleCartoon == 0) {
+    TerribleCartoon = TerribleCartoon + 1;
+    var x = prompt("Terrible cartoon unlocked! Check the achievment section");
+    showElement("button46");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("button38", "click", function( ) {
+  if (TwoThousandOneNews == 0) {
+    TwoThousandOneNews = TwoThousandOneNews + 1;
+    var x = prompt("2001 news? unlocked! Check the achievment section");
+    showElement("button47");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+    setTimeout(function() {
+      if (WARNING == 0) {
+        WARNING = WARNING + 1;
+        var x = prompt("WARNING? Well atleast you got an achievment out of it!");
+        showElement("button48");
+        playSound("sound://category_alerts/retro_game_alert_3.mp3", false);
+      }
+    }, 4000);
+  }
+});
+//Unlock station
+onEvent("button16", "click", function( ) {
+  if (getText("text_input1") == "HfdaAD") {
+    var x = prompt("Newbie Master unlocked! Check the achievment section");
+    showElement("button8");
+    setText("text_input1", "");
+  } else if ((getText("text_input1") == "CHNGLL")) {
+    var x = prompt("What's new? unlocked! Check the achievment section");
+    showElement("button9");
+    setText("text_input1", "");
+  } else if ((getNumber("text_input1") == "65")) {
+    var x = prompt("Just ask? unlocked! Check the achievment section");
+    showElement("button10");
+    setText("text_input1", "");
+  } else if ((getText("text_input1") == "UysanbaA")) {
+    var x = prompt("No changing unlocked! Check the achievment section");
+    showElement("button18");
+    setText("text_input1", "");
+  } else if ((getText("text_input1") == "Utasg")) {
+    var x = prompt("Adventure! unlocked! Check the achievment section");
+    showElement("button26");
+  } else if ((getText("text_input1") == "YYfdaj")) {
+    var x = prompt("Cow unlocked! Check the achievment section");
+    showElement("button27");
+  } else if ((getText("text_input1") == "LKAuhigA")) {
+    var x = prompt("Big spider unlocked! Check the achievment section");
+    showElement("button28");
+  } else if ((getText("text_input1") == "HHHyfsa")) {
+    var x = prompt("GOTTEN!! unlocked! Check the achievment section");
+    showElement("button29");
+  } else if ((getText("text_input1") == "BaQQg")) {
+    var x = prompt("Adventure! unlocked! Check the achievment section!");
+    showElement("button35");
+  } else if ((getText("text_input1") == "CAFGA")) {
+    var x = prompt("Here Your Credits! unlocked! Check the achievment section!");
+    showElement("button61");
+  } else if ((getText("text_input1") == "MAn")) {
+    showElement("button35");
+    var x = prompt("Story Time! unlocked! Check the achievment section!");
+  } else if ((getText("text_input1") == "HfdaAD221")) {
+    showElement("button69");
+    var x = prompt("Advanced Newbie Master unlocked! Check the achievment section!");
+  } else if ((getText("text_input1") == "LKAbsa")) {
+    showElement("button71");
+    var x = prompt("Meow! unlocked! Check the achievment section!");
+  } else if ((getText("text_input1") == "MASDhusa43")) {
+    showElement("button74");
+    var x = prompt("Blossom! unlocked! Check the achievment section!");
+  } else if ((getText("text_input1") == "RevieAAg")) {
+    showElement("button75");
+    var x = prompt("Reviewed! unlocked! Check the achievment section!");
+  } else if ((getText("text_input1") == "Musayta")) {
+    showElement("button79");
+    var x = prompt("You got the achievment yes, but are you listening to music right now, 'cause the achievment is based of music");
+  } else if ((getText("text_input1") == "ImageJdsa")) {
+    var x = prompt("Unlocking Stuff unlocked! Check the achievment section!");
+    showElement("button77");
+  } else if ((getText("text_input1") == "BeasAd")) {
+    var x = prompt("A Second Adventure! unlocked! Check the achievment section!");
+    showElement("button82");
+  } else if ((getText("text_input1") == "EaGota")) {
+    var x = prompt("Image Guesser!! Yeah!! (you unlocked the achievment, don't worry)");
+    showElement("button81");
+    showElement("button81");
+  } else if ((getText("text_input1") == "IASj")) {
+    var x = prompt("Gotcha! unlocked! Check the achievment section!");
+    showElement("button86");
+  } else if ((getText("text_input1") == "ItaJeTT")) {
+    var x = prompt("Trick... unlocked! Check the achievment section!");
+    showElement("button88");
+  } else {
+    setText("text_input1", "INVALID CODE. NO SUCH CODE EXISTS INGAME.");
+  }
+});
+//-URLS
+onEvent("button36", "click", function( ) {
+  open("https://studio.code.org/projects/applab/5iWf47UW0ShXi6CfYSj1XhOjalexkAeNXYGGAH31UKM");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button64", "click", function( ) {
+  if (HowToPlay2 == 0) {
+    var x = prompt("Advanced Newbie Master unlocked! Check the achievment section");
+    HowToPlay2 = HowToPlay2 + 1;
+    showElement("button69");
+  }
+  open("https://studio.code.org/projects/applab/kSfyoHn6m_3BHP63KQhEoZmsY3ktnCpip9jZtkNFQaw/edit");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button33", "click", function( ) {
+  open("https://studio.code.org/projects/applab/ODhnI3FYVs-aIhfHdONjUWi02SMFl-uFbTFOtEQ9iTU");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button7", "click", function( ) {
+  if (HowToPlay == 0) {
+    var x = prompt("Newbie Master unlocked! Check the achievment section");
+    HowToPlay = HowToPlay + 1;
+    showElement("button8");
+  }
+  open("https://studio.code.org/projects/applab/XM-jISepDg5AOmlaxLzrGwiosHmsLkk0ZSKJnjS5TZk");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button89", "click", function( ) {
+  if (Adventure2 == 0) {
+    var x = prompt("A Second Adventure! unlocked! Check the achievment section");
+    Adventure2 = Adventure2 + 1;
+    showElement("button82");
+    open("https://studio.code.org/projects/applab/cUSomSaHfV6Z0JYvca1H6mSTIslY_5MzEV-SP8l2WwU");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("button14", "click", function( ) {
+  if (WhatsNew == 0) {
+    var x = prompt("What's new? unlocked! Check the achievment section");
+    WhatsNew = WhatsNew + 1;
+    showElement("button9");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("button30", "click", function( ) {
+  if (StoryTime == 0) {
+    var x = prompt("Story time! unlocked! Check the achievment section");
+    StoryTime = StoryTime + 1;
+    showElement("button35");
+    open("https://studio.code.org/projects/applab/gbYGAAxM8xtx3i0XizdFT-8REZd7wm-WHb_Pdwh4FWQ/edit");
+  }
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button31", "click", function( ) {
+  if (Adventure == 0) {
+    Adventure = Adventure + 1;
+    var x = prompt("Adventure! unlocked! Check the achievment section!");
+    showElement("button35");
+  }
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+//Settings
+onEvent("button92", "click", function( ) {
+  setScreen("Review");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button91", "click", function( ) {
+  showElement("text_area14");
+  showElement("button93");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+onEvent("button93", "click", function( ) {
+  hideElement("text_area14");
+  hideElement("button93");
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+});
+//-Music
+onEvent("button52", "click", function( ) {
+  playSound("sound://category_background/gametime.mp3", true);
+  stopSound("sound://category_background/progression.mp3");
+  stopSound("sound://category_background/outback.mp3");
+  if (MusicTruth == 0) {
+    var x = prompt("Truth is Music unlocked! (THATS DEEP) Check the achievment section");
+    MusicTruth = MusicTruth + 1;
+    showElement("button79");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("button53", "click", function( ) {
+  if (MusicTruth == 0) {
+    var x = prompt("Truth is Music unlocked! (THATS DEEP) Check the achievment section");
+    MusicTruth = MusicTruth + 1;
+    showElement("button79");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+  playSound("sound://category_background/progression.mp3", true);
+  stopSound("sound://category_background/gametime.mp3");
+  stopSound("sound://category_background/outback.mp3");
+});
+onEvent("button54", "click", function( ) {
+  playSound("sound://category_background/outback.mp3", true);
+  stopSound("sound://category_background/gametime.mp3");
+  stopSound("sound://category_background/progression.mp3");
+  if (MusicTruth == 0) {
+    var x = prompt("Truth is Music unlocked! (THATS DEEP) Check the achievment section");
+    MusicTruth = MusicTruth + 1;
+    showElement("button79");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("image20", "click", function( ) {
+  stopSound("sound://category_background/gametime.mp3");
+  stopSound("sound://category_background/progression.mp3");
+  stopSound("sound://category_background/outback.mp3");
+});
+//SlimePlane
+var SlimePlane = 0;
+timedLoop(30000, function() {
+  showElement("SlimePlane1");
+  setTimeout(function() {
+    showElement("Slimeplane2");
+    hideElement("SlimePlane1");
+  }, 500);
+  setTimeout(function() {
+    hideElement("Slimeplane2");
+    showElement("SlimePlane3");
+  }, 1000);
+  setTimeout(function() {
+    hideElement("SlimePlane3");
+    showElement("SlimePlane4");
+  }, 1500);
+  setTimeout(function() {
+    hideElement("SlimePlane4");
+  }, 2000);
+});
+onEvent("SlimePlane1", "click", function( ) {
+  if (SlimePlane == 0) {
+    var x = prompt("SlimePlane unlocked! Check the achievment section");
+    SlimePlane = SlimePlane + 1;
+    showElement("button51");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("SlimePlane3", "click", function( ) {
+  if (SlimePlane == 0) {
+    var x = prompt("SlimePlane unlocked! Check the achievment section");
+    SlimePlane = Slimeplane + 1;
+    showElement("button51");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("SlimePlane4", "click", function( ) {
+  if (SlimePlane == 0) {
+    var x = prompt("SlimePlane unlocked! Check the achievment section");
+    SlimePlane = Slimeplane + 1;
+    showElement("button51");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("Slimeplane2", "click", function( ) {
+  if (SlimePlane == 0) {
+    var x = prompt("SlimePlane unlocked! Check the achievment section");
+    SlimePlane = Slimeplane + 1;
+    showElement("button51");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+//Time & Date
+timedLoop(1000, function() {
+  //Date
+  var currentDate = new Date ();
+  var day = currentDate.getDate();
+  var month = currentDate.getMonth() + 1;
+  var year = currentDate.getFullYear();
+  var dateShown = ((day + "/") + month + "/") + year;
+  setText("Date", dateShown);
+  //Time
+  var hour = currentDate.getHours();
+  var minute = currentDate.getMinutes();
+  var second = currentDate.getSeconds();
+  if (hour > 12) {
+    hour = hour - 12;
+  }
+  if (second < 10) {
+    second = "0" + second;
+  }
+  var timeShown = hour + ":" + minute + ":" + second;
+  setText("Time", timeShown);
+});
+//Others
+onEvent("button95", "click", function( ) {
+  open("https://studio.code.org/projects/applab/R6bOU3QsUWy3MvOmwDMkMxARR1LhzdpbHBK-nvFvhV4");
+});
+onEvent("text_area5", "click", function( ) {
+  if (NoChanging == 0) {
+    var x = prompt("No changing unlocked! Check the achievment section");
+    NoChanging = NoChanging + 1;
+    showElement("button18");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("image23", "mouseover", function( ) {
+  if (Meow == 0) {
+    var x = prompt("Meow! unlocked! Check the achievment section");
+    Meow = Meow + 1;
+    showElement("button71");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("image7", "mouseover", function( ) {
+  if (Blossom == 0) {
+    var x = prompt("Blossom! unlocked! Check the achievment section");
+    Blossom = Blossom + 1;
+    showElement("button74");
+    playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  }
+});
+onEvent("image29", "click", function( ) {
+  hideElement("image29");
+  hideElement("label20");
+  showElement("image31");
+  showElement("image30");
+  showElement("button58");
+  showElement("button5");
+});
+onEvent("image31", "click", function( ) {
+  hideElement("image31");
+  hideElement("image30");
+  hideElement("button58");
+  hideElement("button5");
+  showElement("image29");
+});
+onEvent("button90", "click", function( ) {
+  playSound("sound://category_app/app_button_slide_cool_2.mp3", false);
+  open("https://studio.code.org/projects/applab/x19aAG71ZRoIrFqslcX-p5V8cr8Zj7T7MmQO9WvEBxo");
+});
